@@ -6,7 +6,7 @@ comments: true
 categories: [c, asm, games, dos]
 ---
 
-Here we are. I found my old games and libraries, in c/asm, I did long time ago in 1997/1998. Amazing.
+Here we are. I found my old games and libraries, in c/asm. I did them long time ago (1997/1998). Amazing.
 
 <a href="{{ root_url }}/images/janjiboy.zip"><img src="{{ root_url }}/images/pic_janji.jpg" width="171" height="137" alt="JanjiBoy" class="left" /></a>
 <a href="{{ root_url }}/images/pacman.zip"><img src="{{ root_url }}/images/pic_pacman.jpg" width="171" height="137" alt="Pacman" class="left" /></a>
