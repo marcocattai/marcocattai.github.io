@@ -118,6 +118,297 @@
 
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2011/06/10/linux-snippets/">Linux - Snippets</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Marco Cattai</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-06-10T18:52:14+01:00" pubdate data-updated="true">Jun 10<span>th</span>, 2011</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/linux/'>linux</a>, <a class='category' href='/blog/categories/snippets/'>snippets</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>
+Search all the files/folder with that name and remove them 
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'> find . -name <span class="s2">&quot;FILE-TO-FIND&quot;</span>-exec rm -rf <span class="o">{}</span> <span class="se">\;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</p>
+
+
+
+
+<p>
+Find all files having .bak (*.bak) extension in current directory and remove them:
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>  find . -type f -name <span class="s2">&quot;*.bak&quot;</span> -exec rm -f <span class="o">{}</span> <span class="se">\;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</p>
+
+
+
+
+<p>
+Find all core files and remove them
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>  find / -name core -exec rm -f <span class="o">{}</span> <span class="se">\;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</p>
+
+
+
+
+<p>
+Find all *.bak files in current directory and removes them with confirmation from user:
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>  find . -type f -name <span class="s2">&quot;*.bak&quot;</span> -exec rm -i <span class="o">{}</span> <span class="se">\;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</p>
+
+
+
+
+<p>
+Find all pdf files and copy them in DestinationFolder:
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>  find . -type f -name <span class="s2">&quot;*.pdf&quot;</span> -exec cp <span class="o">{}</span> DestinationPath <span class="se">\;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</p>
+
+
+
+
+<h2>Searching</h2>
+
+
+<p> <br>
+Search for pattern in files</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   grep pattern files
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Search recursively for pattern in dir</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   grep -r pattern dir
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Search for pattern in the output of command</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   <span class="nb">command</span> | grep pattern
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Locate file – Find all instances of file <br>
+Starting with the root directory, look for the file called filename</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   find / -name filename
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Starting with the root directory, look for the file containing the string filename</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   find / -name ”*filename*”
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Starting with the directory called dir, look for and list all files containing TextStringToFind</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   grep TextStringToFind /dir
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create symbolic link link to file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   ln -s file link
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create or update file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   touch file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Places standard input into file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   cat &gt; file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Display the file called file one page at a time, proceed to next page using the spacebar</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   more file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Output the first 10 lines of file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   head file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Display the first 20 lines of the file called file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   head -20 file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Output the last 10 lines of file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tail file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Display the last 20 lines of the file called file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tail -20 file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Output the contents of file as it grows, starting with the last 10 lines</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tail -f file
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<h2>Compression</h2>
+
+
+<p> Compression</p>
+
+<p> Create a tar named file.tar containing files</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tar cf file.tar files
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Extract the files from file.tar</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tar xf file.tar
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create a tar with Gzip compression</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tar czf file.tar.gz files
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Extract a tar using Gzip</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tar xzf file.tar.gz
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create a tar with Bzip2 compression</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tar cjf file.tar.bz2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Extract a tar using Bzip2</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tar xjf file.tar.bz2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Compresses file and renames it to file.gz</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   gzip file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Decompresses file.gz back to file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   gzip -d file.gz
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2008/09/10/control-for-interpolation-slash-extrapolation-of-points/">Control for <br> Interpolation - Extrapolation of Points.</a></h1>
     
     
@@ -374,6 +665,10 @@ posted in
   <div class="span3">
     <h2>recent posts</h2>
     <ul class="recent_posts">
+      
+        <li>
+          <a href="/blog/2011/06/10/linux-snippets/">Linux - snippets</a>
+        </li>
       
         <li>
           <a href="/blog/2008/09/10/control-for-interpolation-slash-extrapolation-of-points/">Control for <br> Interpolation - Extrapolation of points.</a>
