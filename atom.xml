@@ -4,7 +4,7 @@
   <title><![CDATA[Marco Cattai]]></title>
   <link href="http://marcocattai.github.io/atom.xml" rel="self"/>
   <link href="http://marcocattai.github.io/"/>
-  <updated>2014-02-02T17:35:31+00:00</updated>
+  <updated>2014-02-02T17:43:11+00:00</updated>
   <id>http://marcocattai.github.io/</id>
   <author>
     <name><![CDATA[Marco Cattai]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Control for <br> Interpolation - Extrapolation of points.]]></title>
+    <link href="http://marcocattai.github.io/blog/2008/09/10/control-for-interpolation-slash-extrapolation-of-points/"/>
+    <updated>2008-09-10T18:39:37+01:00</updated>
+    <id>http://marcocattai.github.io/blog/2008/09/10/control-for-interpolation-slash-extrapolation-of-points</id>
+    <content type="html"><![CDATA[<p>This DLL allow you to draw points on a Cartesian plane. That point will be interpolated with linear interpolation and spline cubic interpolation (i will give you this interpolation only if you ask me, this version of software doesn&rsquo;t have it). You can also change value of points acting on a right table with double clicking and inserting new values for them. You can use floating point points or dicrete points visualization only by clicking on lateral checkbox. You can use this control also by calling a method and passing it an array of point that will be showed and interpolated. You can cancel points and you can ask at DLL the extrapolation of any point you need for any X value that you want.</p>
+
+<br>
+
+
+<p><a href="http://dl.dropbox.com/u/7201536/ReleaseInterp.rar" title="Download Example" target="_self"><strong>Click here to download example.</strong></a></p>
+
+
+<p><a href="http://dl.dropbox.com/u/7201536/ReleaseInterp.rar" title="Download Example" target="_self"><div class='p_embed p_image_embed'>
+<img src="http://marcocattai.github.io/images/ctrlinterp.jpg"> </p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[3D GRAPH - Direct3D]]></title>
