@@ -1,4 +1,14 @@
-<p>
-  Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }} -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+<p class="pull-left">
+  <a href="{{ root_url }}/">{{ site.title }}</a>
+  - Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }}
+</p>
+<p class="pull-right">
+  {% unless site.hide_design_credits %}
+  {% endunless %}
+  <span>
+    Powered by <a href="http://octopress.org/" target="_blank">Octopress</a>.
+  </span>
+  <span>
+    Cover photo by Marco Cattai.
+  </span>
 </p>

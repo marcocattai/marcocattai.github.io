@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://marcocattai.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Marco Cattai
+subtitle: Software Engineer<br>iOS developer at EF - Education First (London)
+author: Marco Cattai
 simple_search: http://google.com/search
-description:
+description: Hell yeah!
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -98,3 +98,13 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+# ----------------------- #
+#   Navigation Bar        #
+# ----------------------- #
+
+navigation_elements: [
+  {name: "LinkedIn", link: "http://uk.linkedin.com/pub/marco-cattai/10/7b2/65b"},
+  {name: "Twitter", link: "https://twitter.com/MarcoCattai"},
+  {name: "Code", link: "https://github.com/marcocattai"},
+  ]
