@@ -4,7 +4,7 @@
   <title><![CDATA[Category: parallel | Marco Cattai]]></title>
   <link href="http://marcocattai.github.io/blog/categories/parallel/atom.xml" rel="self"/>
   <link href="http://marcocattai.github.io/"/>
-  <updated>2014-02-02T19:57:55+00:00</updated>
+  <updated>2014-02-02T20:00:23+00:00</updated>
   <id>http://marcocattai.github.io/</id>
   <author>
     <name><![CDATA[Marco Cattai]]></name>
@@ -34,7 +34,7 @@
 </p>
 
 
-<p><a href="http://dl.dropbox.com/u/7201536/pcxrotate.c" title="Source code" target="_self"><strong>I also give you code for that algorithm of rotation/scaling in  standard version for one processor. It include also encoding/decoding  for images PCX(ZSOFT) 24BPP. You can use that source file under Linux  with gcc compiler. </strong></a></p></p>
+<p><a href="http://dl.dropbox.com/u/7201536/pcxrotate.c" title="Source code" target="_self"><strong>I also give you the code for the algorithm of rotation/scaling in  standard version for one processor. It includes encoding/decoding for images PCX(ZSOFT) 24BPP. You can use the source file under Linux and compile it with gcc. </strong></a></p></p>
 
 <p>&nbsp;</p>
 
