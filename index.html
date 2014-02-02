@@ -409,6 +409,100 @@ Starting with the root directory, look for the file called filename</p>
 
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2011/02/03/i-client-server-communication-intercepting-proxy/">Client-Server Communication. Intercepting Proxy</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Marco Cattai</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-02-03T18:15:55+00:00" pubdate data-updated="true">Feb 3<span>rd</span>, 2011</time> - 
+        
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><div class='post_body'><p>It is helpful to see what each side, in a client/Server communication, sends or receives. There are two Unix tools that could be usefull in such situations:</p>
+<p><a href="https://www.owasp.org/index.php/Category:OWASP_WebScarab_Project" title="https://www.owasp.org/index.php/Category:OWASP_WebScarab_Project" target="_blank">&ndash; OWASP WEBScrab Project</a></p>
+<p>WebScarab operates as an intercepting proxy, allowing the operator to   review and modify requests created by the browser before they are sent   to the server, and to review and modify responses returned from the   server before they are received by the browser. It is able to intercept  both HTTP and HTTPS communication.</p>
+<p><a href="http://www.parosproxy.org/" title="http://www.parosproxy.org/" target="_blank">&ndash; Paros</a> (<a href="http://research.corsaire.com/tools/" title="http://research.corsaire.com/tools/" target="_blank">Mac</a>)</p>
+<p>Paros features request and response editing and automated scanning of Cross Site Scripting and SQL injection vulnerabilities</p>
+<p>&ndash; NETCAT&nbsp; Listen all TCP/UDP connections on a specific port</p>
+<p>&ndash; cURL&nbsp; send &lsquo;fake&rsquo; requests to a server.</p>
+<div><span style="font-size: large;">Listening to incoming requests</span></div>
+<p><br /> We start a listening server with</p></p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   nc -lk <span class="nv">$ip</span> <span class="nv">$port</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><ul>
+<li><em><span style="font-family: Times,Times New Roman,serif;">-l: listen</span></em></li>
+<li><em><span style="font-family: Times,Times New Roman,serif;">-k: forces nc to stay listening for another connection after its current connection is completed.</span></em></li>
+<li><em><span style="font-family: Times,Times New Roman,serif;">$ip: the IP/interface you want to bind to. Use 0.0.0.0 to bind to all interfaces and IPs.</span></em></li>
+<li><em><span style="font-family: Times,Times New Roman,serif;">$port:  the port you want to bind to. Doesn&rsquo;t really matter which one you use,  as long as the client uses the same one to connect to.</span></em></li>
+</ul></p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   nc -lk 0.0.0.0 8080
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><p>&nbsp;</p>
+<p><span style="font-size: large;">Sending &ldquo;fake&rdquo; requests to a server</span></p>
+<p>&nbsp;</p>
+<p>With CURL it is as simply as that:</p></p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   curl -v -i -X POST -d <span class="nv">$data</span> <span class="nv">$uri</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><ul>
+<li><em>&ndash;<span style="font-family: Times,Times New Roman,serif;">v: verbose</span></em></li>
+<li><em><span style="font-family: Times,Times New Roman,serif;">-i: include HTTP headers in the output</span></em></li>
+<li><em><span style="font-family: Times,Times New Roman,serif;">-X: HTTP request type. Defaults to GET if none given</span></em></li>
+<li><em><span style="font-family: Times,Times New Roman,serif;">-d: data</span></em></li>
+</ul></p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   curl  -v -i -X POST -d  <span class="s1">&#39;{&quot;id&quot;:1,&quot;action&quot;:&quot;getRecord&quot;,&quot;params&quot;:{&quot;clientVersion&quot;:&quot;1.0.0.230&quot;,&quot;user&quot;:&quot;kat&quot;}}&#39;</span>
+</span></code></pre></td></tr></table></div></figure></p>
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2008/09/10/control-for-interpolation-slash-extrapolation-of-points/">Control for <br> Interpolation - Extrapolation of Points.</a></h1>
     
     
@@ -668,6 +762,10 @@ posted in
       
         <li>
           <a href="/blog/2011/06/10/linux-snippets/">Linux - snippets</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2011/02/03/i-client-server-communication-intercepting-proxy/">Client-Server Communication. Intercepting proxy</a>
         </li>
       
         <li>
