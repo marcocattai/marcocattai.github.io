@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: dos | Marco Cattai]]></title>
+  <link href="http://marcocattai.github.io/blog/categories/dos/atom.xml" rel="self"/>
+  <link href="http://marcocattai.github.io/"/>
+  <updated>2014-02-02T19:54:44+00:00</updated>
+  <id>http://marcocattai.github.io/</id>
+  <author>
+    <name><![CDATA[Marco Cattai]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Games for DOS in c/asm: a lot of years ago]]></title>
+    <link href="http://marcocattai.github.io/blog/2012/10/02/games-in-c-slash-asm-a-lot-of-years-ago/"/>
+    <updated>2012-10-02T20:39:22+01:00</updated>
+    <id>http://marcocattai.github.io/blog/2012/10/02/games-in-c-slash-asm-a-lot-of-years-ago</id>
+    <content type="html"><![CDATA[<p>Here we are. I found my old games and libraries, in c/asm, I did long time ago in 1997/1998. Amazing.</p>
+
+<p><a href="/images/janjiboy.zip"><img src="/images/pic_janji.jpg" width="171" height="137" alt="JanjiBoy" class="left" /></a>
+<a href="/images/pacman.zip"><img src="/images/pic_pacman.jpg" width="171" height="137" alt="Pacman" class="left" /></a>
+<a href="/images/tetris.zip"><img src="/images/pic_tetris.jpg" width="171" height="137" alt="Tetris" class="right" /></a>
+<a href="/images/fuoco.zip"><img src="/images/pic_fuoco.jpg" width="171" height="137" alt="Fuoco" class="right" /></a>
+<a href="/images/plasma.zip"><img src="/images/pic_plasma.jpg" width="171" height="137" alt="Plasma" class="left" /></a>
+<a href="/images/tris.zip"><img src="/images/pic_tris.jpg" width="171" height="137" alt="Tris" class="left" /></a>
+<a href="/images/airwar.zip"><img src="/images/pic_airwar.jpg" width="171" height="137" alt="Airwar" class="right" /></a>
+<a href="/images/sfere.zip"><img src="/images/pic_palle.jpg" width="171" height="137" alt="Sfere" class="right" /></a>
+<a href="/images/onde.zip"><img src="/images/pic_onda.jpg" width="171" height="137" alt="Onde" class="left" /></a></p>
+]]></content>
+  </entry>
+  
+</feed>
