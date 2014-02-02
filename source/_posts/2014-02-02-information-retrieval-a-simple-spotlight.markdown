@@ -68,7 +68,7 @@ categories: [Information, retrieval, spotlight, iOS]
 	NSArray *stopWordsENG = [englishStopWords componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@" \n"]];  
 {% endcodeblock %}
 
-<p><strong>2) Get Your document's text ans Save them in a Dictionary where a word is the key and the value is the frequency of that word in the Document.</strong></p>
+<p><strong>2) Get Your document's text ans save it in a dictionary where a word is the key and the value is the frequency of that word in the Document.</strong></p>
 <p><strong>3) Filter the dictionary ad remove all stop words. You can also filter the dictionary's representation of a document with the stopwords while you are creating it</strong></p>
 <p><strong>4) Describe your document in a DB (ex. NSManagedObject is IADocument class)</strong></p>
 <p><strong>5) Save the descriptor for that document</strong></p>
