@@ -4,7 +4,7 @@
   <title><![CDATA[Category: spotlight | Marco Cattai]]></title>
   <link href="http://marcocattai.github.io/blog/categories/spotlight/atom.xml" rel="self"/>
   <link href="http://marcocattai.github.io/"/>
-  <updated>2014-02-02T19:26:05+00:00</updated>
+  <updated>2014-02-02T19:27:42+00:00</updated>
   <id>http://marcocattai.github.io/</id>
   <author>
     <name><![CDATA[Marco Cattai]]></name>
@@ -91,7 +91,7 @@
 </span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
-<p><p><strong>2) Get Your document&rsquo;s text ans Save them in a Dictionary where a word is the key and the value is the frequency of that word in the Document.</strong></p>
+<p><p><strong>2) Get Your document&rsquo;s text ans save it in a dictionary where a word is the key and the value is the frequency of that word in the Document.</strong></p>
 <p><strong>3) Filter the dictionary ad remove all stop words. You can also filter the dictionary&rsquo;s representation of a document with the stopwords while you are creating it</strong></p>
 <p><strong>4) Describe your document in a DB (ex. NSManagedObject is IADocument class)</strong></p>
 <p><strong>5) Save the descriptor for that document</strong></p>
