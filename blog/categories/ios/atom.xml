@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Marco Cattai]]></title>
   <link href="http://marcocattai.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://marcocattai.github.io/"/>
-  <updated>2014-02-02T19:22:33+00:00</updated>
+  <updated>2014-02-02T19:24:40+00:00</updated>
   <id>http://marcocattai.github.io/</id>
   <author>
     <name><![CDATA[Marco Cattai]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Information Retrieval: a simple SPOTLIGHT]]></title>
-    <link href="http://marcocattai.github.io/blog/2012/04/02/information-retrieval-a-simple-spotlight/"/>
-    <updated>2012-04-02T15:24:03+01:00</updated>
-    <id>http://marcocattai.github.io/blog/2012/04/02/information-retrieval-a-simple-spotlight</id>
+    <link href="http://marcocattai.github.io/blog/2010/04/02/information-retrieval-a-simple-spotlight/"/>
+    <updated>2010-04-02T15:24:03+01:00</updated>
+    <id>http://marcocattai.github.io/blog/2010/04/02/information-retrieval-a-simple-spotlight</id>
     <content type="html"><![CDATA[<p><div class='post_body'><p>In this post I want to write about Information retrieval. Spotlight is a selection-based search system, which creates a virtual index of all items and files you want.</p>
 <p>we must solve the following problem:</p>
 <blockquote>
