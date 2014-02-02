@@ -1,0 +1,358 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Information Retrieval: a simple SPOTLIGHT - Marco Cattai</title>
+  <meta name="author" content="Marco Cattai">
+  <link rel="author" href="humans.txt">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  
+    
+  
+  <meta name="description" content="In this post I want to write about Information retrieval. Spotlight is a selection-based search system, which creates a virtual index of all items &hellip;">
+  
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://marcocattai.github.io/blog/2012/04/02/information-retrieval-a-simple-spotlight/">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Marco Cattai" type="application/atom+xml">
+  <meta name="og:type" content="website" />
+  <meta name="og:site_name" content="Marco Cattai" />
+  <meta name="og:title" content="Information Retrieval: a simple SPOTLIGHT" />
+  <meta name="og:description" content="In this post I want to write about Information retrieval. Spotlight is a selection-based search system, which creates a virtual index of all items &hellip;" />
+  <meta name="og:url" content="http://marcocattai.github.io/blog/2012/04/02/information-retrieval-a-simple-spotlight/"/>
+  <meta name="url" content="http://marcocattai.github.io/blog/2012/04/02/information-retrieval-a-simple-spotlight/">
+  
+  <meta name="subject" content="InformationiOSretrievalspotlight"/>
+  <meta name="category" content="InformationiOSretrievalspotlight"/>
+  
+  <meta name="distribution" content="global">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="/">Marco Cattai</a>
+    <ul class="nav">
+      <li><a href="/blog/archives">All Blogs</a></li>
+      
+      <li>
+        <a href="http://uk.linkedin.com/pub/marco-cattai/10/7b2/65b">
+          LinkedIn
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://twitter.com/MarcoCattai">
+          Twitter
+        </a>
+      </li>
+      
+      <li>
+        <a href="https://github.com/marcocattai">
+          Code
+        </a>
+      </li>
+      
+    </ul>
+    <ul class="nav" data-subscription="rss">
+      <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+      
+    </ul>
+      
+    <form class="navbar-form" action="http://google.com/search" method="get">
+      <fieldset role="search">
+        <input type="hidden" name="q" value="site:marcocattai.github.io" />
+        <input class="span2" type="text" name="q" results="0" placeholder="Search"/>
+      </fieldset>
+    </form>
+      
+    
+  </div>
+</div>
+</nav>
+  <div class="wrapper_single">
+    <div class="container">
+      <article class="span8 offset2" role="article">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title">Information Retrieval: A Simple SPOTLIGHT</h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Marco Cattai</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-02T15:24:03+01:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2012</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/information/'>Information</a>, <a class='category' href='/blog/categories/ios/'>iOS</a>, <a class='category' href='/blog/categories/retrieval/'>retrieval</a>, <a class='category' href='/blog/categories/spotlight/'>spotlight</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><div class='post_body'><p>In this post I want to write about Information retrieval. Spotlight is a selection-based search system, which creates a virtual index of all items and files you want.</p>
+<p>we must solve the following problem:</p>
+<blockquote>
+<p><strong><span style="color: #000000;">We have a lot of PDF described by the text they contain or also images/videos described using TAGS. Spotlight allow the user to quickly locate a wide variety of relevant items that contain , with high probability, the informations you are looking for.</span></strong><strong><span style="color: #000000;">  </span></strong>
+</blockquote>
+<p>We will use:</p>
+<p>An <span style="color: #ff0000;"><strong>Information Retrieval System (IRS).</strong></span><strong> </strong>It is a system <span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">designed and</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">built</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">to</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">perform tasks of Information Retrieval for big collections of documents, it ensures decription of documents </span></span><span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">and retrieval</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">of</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">those</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">considered</span> <strong><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">relevant </span></strong></span><span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">to</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">the needs</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">expressed</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">by the</span> user &rsquo;s <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">questions</span><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">.<br /></span></span></p>
+<p><!--more--></p>
+<p>Let&rsquo;s start with some Theory:</p>
+<p><span style="font-size: large;"><strong>Let:</strong></span></p>
+<p><span style="font-size: x-large;"><strong>d</strong></span>i = (<span style="font-size: x-large;">w</span>i1, &hellip;, <span style="font-size: x-large;">w</span>ik)</p>
+<p><span style="font-size: medium;">be the vectorial rappresentation of a document</span>.</p>
+<p><span style="font-size: x-large;">w</span>ij is the weight of <strong>descriptor </strong><span style="font-size: x-large;">t</span>j in document <span style="font-size: x-large;"><strong>d</strong></span>i</p>
+<p>Right now let&rsquo;s say that a descriptor is a single word in a document (PDF).</p>
+<p>&nbsp;</p>
+<p>Now we choose a weight schema that&rsquo;s called <strong>TF (Term Frequency).</strong></p>
+<p><span style="font-size: x-large;">w</span>ij = <span style="font-size: x-large;">f</span>ij</p>
+<p>Where <span style="font-size: x-large;">f</span>ij is the number of times descriptor <span style="font-size: x-large;">t</span>j appear in document <span style="font-size: x-large;"><strong>d</strong></span>i</p>
+<p>Let:</p>
+<p><span style="font-size: x-large;"><strong>D</strong></span>1 = {a, a, a, b, b, c}</p>
+<p><span style="font-size: x-large;"><strong>D</strong></span>2 = {a, a, b, c}</p>
+<p><span style="font-size: x-large;"><strong>D</strong></span>3 = {a, b, b, c}</p>
+<p><span style="font-size: x-large;"><strong>D</strong></span>4 = {a, b, d}</p>
+<p>Our Query is&nbsp; <span style="font-size: x-large;"><strong>Q</strong></span> = {a, c, d}</p>
+<p>&nbsp;</p>
+<p><span style="font-size: x-large;"><strong>Q</strong></span><span style="font-size: x-large;"><strong> D</strong></span>1 = {4}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size: x-large;"><strong>Q</strong></span><span style="font-size: x-large;"><strong> D</strong></span>2 = {3}&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size: x-large;"><strong>Q</strong></span><span style="font-size: x-large;"><strong> D</strong></span>3 = {2}&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size: x-large;"><strong>Q</strong></span><span style="font-size: x-large;"><strong> D</strong></span>4 = {2}<br /><span style="font-size: x-large;"><strong>&nbsp;</strong></span></p>
+<p>Won <span style="font-size: x-large;"><strong>D</strong></span>1 and <span style="font-size: x-large;"><strong>D</strong></span>2 becouse &ldquo;a&rdquo; <span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">appears</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">several</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">times in each. <span style="color: #ff0000;"><strong>BUT IT APPEARS IN ALL DOCUMENTS!!!</strong></span></span></span><span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">&nbsp;</span></span></p>
+<p><span style="color: #ff0000;">The Presence of d in our query can not discriminate <span style="font-size: x-large;"><strong>D</strong></span>4 </span></p>
+<p><span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">We must define a schema <strong>IDF (Inverse Document Frequency)</strong></span></span></p>
+<p><span style="font-size: x-large;">w</span>ij = <span style="font-size: x-large;">log (N/n</span>j<span style="font-size: x-large;">)</span></p>
+<p><span style="font-size: x-large;">N </span><span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">is the number of documents in our collection</span></span><span style="font-size: x-large;">. </span></p>
+<p><span style="font-size: x-large;">n</span>j<span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps"> is the number of documents, of the whole collection, </span></span><span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">where</span></span><span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps"> the descriptor</span></span><span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps"> </span></span><span style="font-size: x-large;">t</span>j appear.</p>
+<p>So our search Engine will return <span style="font-size: x-large;"><strong>D</strong></span>4.</p>
+<p><span style="text-decoration: underline;">If a descriptor appear many times in all documents then it loses importance in the description of documents. </span></p>
+<p>&nbsp;</p>
+<p>The schema that we will use is a combination of schema explained in this post. Its name is <strong>TFIDF</strong></p>
+<p><span style="font-size: x-large;">w</span>ij = <span style="font-size: x-large;">f</span>ij <span style="font-size: x-large;">log (N/n</span>j<span style="font-size: x-large;">)</span></p>
+<p>Long documents contains relevant descriptors many times than short documents. Our search Engine will give more importance at first   .</p>
+<p><span style="font-size: x-large;"><span style="font-size: medium;"><span style="font-family: mceinline;">In your CoreData Project open .xcdatamodel and add the following table:</span></span></span></p>
+<img src="/images/descriptor.png"/></p>
+
+<p><p>&nbsp;</p>
+<p>It describes:</p>
+<p>&ndash; the word field</p>
+<p>&ndash; the frequency of the word</p>
+<p>&ndash; the weight of the word</p>
+<p>&ndash; A Relation (with Inverse) to your Documents Table.</p></p>
+
+<p><p>In a document there are a lot of words that are not useful for our purposes, becouse they don&rsquo;t describe the content of our documents. That words are articles, some adjectives and so on&hellip; In the following Link you can find two list of words that I prepared in Italian and English. They&rsquo;re called <strong>STOP WORDS</strong>.</p>
+<ul>
+<li><a href="http://dl.dropbox.com/u/7201536/stop-words-ita.txt" title="STOP WORDS ITA" target="_blank"><strong>Italian STOP WORDS</strong></a></li>
+<li><a href="http://dl.dropbox.com/u/7201536/stop-words-eng.txt" title="STOP WORDS ENG" target="_blank"><strong>English STOP WORDS</strong></a></li>
+</ul>
+<p><strong>1) Read both files in two NSString:</strong></p>
+<p>NSString <em>englishStopWords &lt;&ndash; stop-words-eng.txt<br />NSString </em>italianStopWords &lt;&ndash; stop-words-ita.txt</p>
+<p><strong>Now split them in an array</strong><br /></p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'> <span class="n">NSArray</span> <span class="o"><em></span><span class="n">stopWordsITA</span> <span class="o">=</span> <span class="p">[</span><span class="n">italianStopWords</span> <span class="nl">componentsSeparatedByCharactersInSet:</span><span class="p">[</span><span class="n">NSCharacterSet</span> <span class="nl">characterSetWithCharactersInString:</span><span class="s">@&quot; </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">]];</span>
+</span><span class='line'>  <span class="n">NSArray</span> <span class="o"></em></span><span class="n">stopWordsENG</span> <span class="o">=</span> <span class="p">[</span><span class="n">englishStopWords</span> <span class="nl">componentsSeparatedByCharactersInSet:</span><span class="p">[</span><span class="n">NSCharacterSet</span> <span class="nl">characterSetWithCharactersInString:</span><span class="s">@&quot; </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">]];</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><p><strong>2) Get Your document&rsquo;s text ans Save them in a Dictionary where a word is the key and the value is the frequency of that word in the Document.</strong></p>
+<p><strong>3) Filter the dictionary ad remove all stop words. You can also filter the dictionary&rsquo;s representation of a document with the stopwords while you are creating it</strong></p>
+<p><strong>4) Describe your document in a DB (ex. NSManagedObject is IADocument class)</strong></p>
+<p><strong>5) Save the descriptor for that document</strong></p>
+<p><strong>6) Now keeping reference at what we explained at the beginning of this post create your retrieval function</strong></p></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Marco Cattai</span></span>
+  
+
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-04-02T15:24:03+01:00" pubdate data-updated="true">Apr 2<span>nd</span>, 2012</time>
+      
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/information/'>Information</a>, <a class='category' href='/blog/categories/ios/'>iOS</a>, <a class='category' href='/blog/categories/retrieval/'>retrieval</a>, <a class='category' href='/blog/categories/spotlight/'>spotlight</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://marcocattai.github.io/blog/2012/04/02/information-retrieval-a-simple-spotlight/" data-via="" data-counturl="http://marcocattai.github.io/blog/2012/04/02/information-retrieval-a-simple-spotlight/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    
+      <a class="pull-left" href="/blog/2011/06/10/linux-snippets/" title="Previous Post: Linux - snippets">&laquo; Linux - snippets</a>
+    
+    
+  </footer>
+
+</div>
+
+        
+      </article>
+    </div>
+  </div>
+  <div id="footer-widgets">
+  <div class="container">
+    <div class="row">
+  <div class="span3">
+    <h2>recent posts</h2>
+    <ul class="recent_posts">
+      
+        <li>
+          <a href="/blog/2012/04/02/information-retrieval-a-simple-spotlight/">Information Retrieval: a simple SPOTLIGHT</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2011/06/10/linux-snippets/">Linux - snippets</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2011/02/03/i-client-server-communication-intercepting-proxy/">Client-Server Communication. Intercepting proxy</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2008/09/10/control-for-interpolation-slash-extrapolation-of-points/">Control for <br> Interpolation - Extrapolation of points.</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2008/09/10/3d-graph-direct3d/">3D GRAPH - Direct3D</a>
+        </li>
+      
+    </ul>
+    <h2><a href="/blog/archives">archives</a></h2>
+  </div>
+  <div class="span6">
+    
+
+  </div>
+  <div class="span3">
+    
+
+  </div>
+</div>
+
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-left">
+  <a href="/">Marco Cattai</a>
+  - Copyright &copy; 2014 - Marco Cattai
+</p>
+<p class="pull-right">
+  
+  
+  <span>
+    Powered by <a href="http://octopress.org/" target="_blank">Octopress</a>.
+  </span>
+  <span>
+    Cover photo by Marco Cattai.
+  </span>
+</p>
+
+  </div>
+</footer>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script>window.jQuery || document.write('<script src="/javascripts/libs/jquery-1.7.2.min.js" type="text/javascript"><\/script>')</script>
+<script src="/javascripts/libs/bootstrap.min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.tweet.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.instagram.js" type="text/javascript"></script>
+<script src="/javascripts/libs/jquery.masonry.min.js" type="text/javascript"></script>
+<script src="/javascripts/custom.js" type="text/javascript"></script>
+
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+</body>
+</html>
