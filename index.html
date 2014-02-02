@@ -112,6 +112,183 @@
     <div class="row" id="post-container">
     
     
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2008/09/10/3d-graph-direct3d/">3D GRAPH - Direct3D</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Marco Cattai</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-09-10T18:09:53+01:00" pubdate data-updated="true">Sep 10<span>th</span>, 2008</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/3d/'>3d</a>, <a class='category' href='/blog/categories/direct3d/'>direct3d</a>, <a class='category' href='/blog/categories/directx/'>directx</a>, <a class='category' href='/blog/categories/net/'>net</a>, <a class='category' href='/blog/categories/visualstudio/'>visualstudio</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>This Software allow, using a DLL that I realized in C#/Direct3D, to visualize a 3D Map. You can modify the graph using direct manipulation of the intersection points or using 2D section&rsquo;s views. Below you can see images, video and a downlodable example that show how it works.</p>
+
+<p>I developed this for my dissertation at university and it is used in more complex software I did in 2008. The component is not the original one I did for Aprilia, the interface is different and a lot of functionalities are missing here. The original software allow the correction of injection maps of a four stroke engine. It is used for the correction of injection maps of Aprilia RSV4 (Superbike team). This component was also a simple way to see the injection maps using a 3D View.</p>
+
+<br>
+
+
+<p><img src="/images/3D1.jpg" /></p>
+
+<br>
+
+
+<br>
+
+
+<p><img src="/images/3D2.jpg" /></p>
+
+<br>
+
+
+<br>
+
+
+<p><img src="/images/3D3.jpg" /></p>
+
+<br>
+
+
+<br>
+
+
+<p><video width='320' height='240' preload='none' controls poster='https://dl.dropboxusercontent.com/u/7201536/graphThumb.png'><source src='https://dl.dropboxusercontent.com/u/7201536/Graph2008.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video></p>
+
+<br>
+
+
+<p><a href="http://dl.dropbox.com/u/7201536/graph3D-DirectX.zip" title="Example" target="_self"><strong>Click here to download the example.</strong></a></p></p>
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
+    
+      <article class="span4">
+        <div class="article-format">
+
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2006/02/02/mpi-parallel-rotation/">MPI - Parallel Rotation</a></h1>
+    
+    
+      <p class="meta">
+        
+  
+
+
+  
+    <span class="byline author vcard">by <span class="fn">Marco Cattai</span></span>
+  
+
+ - 
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2006-02-02T16:50:48+00:00" pubdate data-updated="true">Feb 2<span>nd</span>, 2006</time> - 
+        
+
+posted in
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/24bpp/'>24bpp</a>, <a class='category' href='/blog/categories/c/'>C</a>, <a class='category' href='/blog/categories/mpi/'>MPI</a>, <a class='category' href='/blog/categories/pcx-zsoft/'>PCX(ZSOFT)</a>, <a class='category' href='/blog/categories/c/'>c</a>, <a class='category' href='/blog/categories/mpi/'>mpi</a>, <a class='category' href='/blog/categories/parallel/'>parallel</a>, <a class='category' href='/blog/categories/pcx/'>pcx</a>, <a class='category' href='/blog/categories/rs6000/'>rs6000</a>
+  
+</span>
+
+
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Parallel rotation on IBM RS/6000 SP</p>
+
+<br>
+
+
+<p><img src="/images/23496089-rotaz.jpg" /></p>
+
+<br>
+
+
+
+
+<p>Programmed in C language, using MPI libraries. This is a parallel implementation of a rotation algorithm for 24BPP image in PCX(ZSOFT) format. i also implemented reader/writer for that format. Software finish always with success its execution according to settings in job&#8217;s file assigned to scheduler using loadLeveler management system. Test was executed highlighting the networking subsystem in the multicore environment IBM RS/6000 SP with image&#8217;s input of any dimension. Considered parameters in different executions are: - Different size of PCX images (800x600 - 1024x768 - 1191x893 - 2048x1536 - 4000x3000); - Different networking system (high performance switch or ethernet); - Different number of CPU. Remains invariant the angle of rotation for all the tests.
+</p>
+
+
+<p><a href="http://dl.dropbox.com/u/7201536/pcxrotate.c" title="Source code" target="_self"><strong>I also give you code for that algorithm of rotation/scaling in  standard version for one processor. It include also encoding/decoding  for images PCX(ZSOFT) 24BPP. You can use that source file under Linux  with gcc compiler. </strong></a></p></p>
+
+<p>&nbsp;</p>
+
+
+<p><p><strong><div class='p_embed p_file_embed'>
+<div class='p_embed_description'>
+<strong>RotazioneMPI.pdf</strong>
+<a href="/images/5636698-RotazioneMPI.pdf">View this file</a>
+</div></p>
+</div>
+  
+  
+
+
+</div>
+
+      </article>
+    
     </div>
       <div class="row">
         <ul class="pager">
@@ -129,6 +306,14 @@
   <div class="span3">
     <h2>recent posts</h2>
     <ul class="recent_posts">
+      
+        <li>
+          <a href="/blog/2008/09/10/3d-graph-direct3d/">3D GRAPH - Direct3D</a>
+        </li>
+      
+        <li>
+          <a href="/blog/2006/02/02/mpi-parallel-rotation/">MPI - parallel rotation</a>
+        </li>
       
     </ul>
     <h2><a href="/blog/archives">archives</a></h2>
