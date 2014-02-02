@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Information Retrieval: a simple SPOTLIGHT"
-date: 2010-04-02 14:24:03 +0000
+date: 2012-04-02 14:24:03 +0000
 comments: true
 categories: [Information, retrieval, spotlight, iOS]
 ---
