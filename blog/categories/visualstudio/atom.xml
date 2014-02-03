@@ -4,7 +4,7 @@
   <title><![CDATA[Category: visualstudio | Marco Cattai]]></title>
   <link href="http://marcocattai.github.io/blog/categories/visualstudio/atom.xml" rel="self"/>
   <link href="http://marcocattai.github.io/"/>
-  <updated>2014-02-02T20:45:53+00:00</updated>
+  <updated>2014-02-03T09:35:32+00:00</updated>
   <id>http://marcocattai.github.io/</id>
   <author>
     <name><![CDATA[Marco Cattai]]></name>
@@ -18,7 +18,7 @@
     <link href="http://marcocattai.github.io/blog/2008/09/10/control-for-interpolation-slash-extrapolation-of-points/"/>
     <updated>2008-09-10T18:39:37+01:00</updated>
     <id>http://marcocattai.github.io/blog/2008/09/10/control-for-interpolation-slash-extrapolation-of-points</id>
-    <content type="html"><![CDATA[<p>This DLL allow you to draw points on a Cartesian plane. That point will be interpolated with linear interpolation and spline cubic interpolation (i will give you this interpolation only if you ask me, this version of software doesn&rsquo;t have it). You can also change value of points acting on a right table with double clicking and inserting new values for them. You can use floating point points or dicrete points visualization only by clicking on lateral checkbox. You can use this control also by calling a method and passing it an array of point that will be showed and interpolated. You can cancel points and you can ask at DLL the extrapolation of any point you need for any X value that you want.</p>
+    <content type="html"><![CDATA[<p>This DLL allow you to draw points on a Cartesian plane. Points will be interpolated using linear interpolation or spline cubic interpolation (i will give you this interpolation only if you ask me, this version of software doesn&rsquo;t have it). You can also change the value of a single point changing directly its value. You can enable or disable floating points or dicrete points visualization only selecting the option button. You can cancel points and you can ask for the extrapolation&rsquo;s value of any point you need for any specific X value that you want.</p>
 
 <br>
 
