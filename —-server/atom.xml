@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Marco Cattai]]></title>
   <link href="http://marcocattai.github.io/atom.xml" rel="self"/>
   <link href="http://marcocattai.github.io/"/>
-  <updated>2014-01-31T16:41:12+00:00</updated>
+  <updated>2014-02-04T22:06:43+00:00</updated>
   <id>http://marcocattai.github.io/</id>
   <author>
     <name><![CDATA[Marco Cattai]]></name>
@@ -12,5 +12,492 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Games for DOS in c/asm: a lot of years ago]]></title>
+    <link href="http://marcocattai.github.io/blog/2012/10/02/games-in-c-slash-asm-a-lot-of-years-ago/"/>
+    <updated>2012-10-02T20:39:22+01:00</updated>
+    <id>http://marcocattai.github.io/blog/2012/10/02/games-in-c-slash-asm-a-lot-of-years-ago</id>
+    <content type="html"><![CDATA[<p>Here we are. I found my old games and libraries, in c/asm. I did them long time ago (1997/1998). Amazing.</p>
+
+<p><a href="http://marcocattai.github.io/images/janjiboy.zip"><img src="http://marcocattai.github.io/images/pic_janji.jpg" width="171" height="137" alt="JanjiBoy" class="left" /></a>
+<a href="http://marcocattai.github.io/images/PACMAN.zip"><img src="http://marcocattai.github.io/images/pic_pacman.jpg" width="171" height="137" alt="Pacman" class="left" /></a>
+<a href="http://marcocattai.github.io/images/Tetris.zip"><img src="http://marcocattai.github.io/images/pic_tetris.jpg" width="171" height="137" alt="Tetris" class="right" /></a>
+<a href="http://marcocattai.github.io/images/Fuoco.zip"><img src="http://marcocattai.github.io/images/pic_fuoco.jpg" width="171" height="137" alt="Fuoco" class="right" /></a>
+<a href="http://marcocattai.github.io/images/Plasma.zip"><img src="http://marcocattai.github.io/images/pic_plasma.jpg" width="171" height="137" alt="Plasma" class="left" /></a>
+<a href="http://marcocattai.github.io/images/TRIS.zip"><img src="http://marcocattai.github.io/images/pic_tris.jpg" width="171" height="137" alt="Tris" class="left" /></a>
+<a href="http://marcocattai.github.io/images/AIRWAR.zip"><img src="http://marcocattai.github.io/images/pic_airwar.jpg" width="171" height="137" alt="Airwar" class="right" /></a>
+<a href="http://marcocattai.github.io/images/SFERE.zip"><img src="http://marcocattai.github.io/images/pic_palle.jpg" width="171" height="137" alt="Sfere" class="right" /></a>
+<a href="http://marcocattai.github.io/images/ONDE.zip"><img src="http://marcocattai.github.io/images/pic_onda.jpg" width="171" height="137" alt="Onde" class="left" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Information Retrieval: a simple SPOTLIGHT]]></title>
+    <link href="http://marcocattai.github.io/blog/2012/04/02/information-retrieval-a-simple-spotlight/"/>
+    <updated>2012-04-02T15:24:03+01:00</updated>
+    <id>http://marcocattai.github.io/blog/2012/04/02/information-retrieval-a-simple-spotlight</id>
+    <content type="html"><![CDATA[<p><div class='post_body'><p>In this post I want to write about Information retrieval. Spotlight is a selection-based search system, which creates a virtual index of all items and files you want.</p>
+<p>we must solve the following problem:</p>
+<blockquote>
+<p><strong><span style="color: #000000;">We have a lot of PDF described by the text they contain or also images/videos described using TAGS. Spotlight allow the user to quickly locate a wide variety of relevant items that contain , with high probability, the informations you are looking for.</span></strong><strong><span style="color: #000000;">  </span></strong>
+</blockquote>
+<p>We will use:</p>
+<p>An <span style="color: #ff0000;"><strong>Information Retrieval System (IRS).</strong></span><strong> </strong>It is a system <span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">designed and</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">built</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">to</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">perform tasks of Information Retrieval for big collections of documents, it ensures decription of documents </span></span><span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">and retrieval</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">of</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">those</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">considered</span> <strong><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">relevant </span></strong></span><span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">to</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">the needs</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">expressed</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">by the</span> user &rsquo;s <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">questions</span><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">.<br /></span></span></p>
+<p><!--more--></p>
+<p>Let&rsquo;s start with some Theory:</p>
+<p><span style="font-size: large;"><strong>Let:</strong></span></p>
+<p><span style="font-size: x-large;"><strong>d</strong></span>i = (<span style="font-size: x-large;">w</span>i1, &hellip;, <span style="font-size: x-large;">w</span>ik)</p>
+<p><span style="font-size: medium;">be the vectorial rappresentation of a document</span>.</p>
+<p><span style="font-size: x-large;">w</span>ij is the weight of <strong>descriptor </strong><span style="font-size: x-large;">t</span>j in document <span style="font-size: x-large;"><strong>d</strong></span>i</p>
+<p>Right now let&rsquo;s say that a descriptor is a single word in a document (PDF).</p>
+<p>&nbsp;</p>
+<p>Now we choose a weight schema that&rsquo;s called <strong>TF (Term Frequency).</strong></p>
+<p><span style="font-size: x-large;">w</span>ij = <span style="font-size: x-large;">f</span>ij</p>
+<p>Where <span style="font-size: x-large;">f</span>ij is the number of times descriptor <span style="font-size: x-large;">t</span>j appear in document <span style="font-size: x-large;"><strong>d</strong></span>i</p>
+<p>Let:</p>
+<p><span style="font-size: x-large;"><strong>D</strong></span>1 = {a, a, a, b, b, c}</p>
+<p><span style="font-size: x-large;"><strong>D</strong></span>2 = {a, a, b, c}</p>
+<p><span style="font-size: x-large;"><strong>D</strong></span>3 = {a, b, b, c}</p>
+<p><span style="font-size: x-large;"><strong>D</strong></span>4 = {a, b, d}</p>
+<p>Our Query is&nbsp; <span style="font-size: x-large;"><strong>Q</strong></span> = {a, c, d}</p>
+<p>&nbsp;</p>
+<p><span style="font-size: x-large;"><strong>Q</strong></span><span style="font-size: x-large;"><strong> D</strong></span>1 = {4}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size: x-large;"><strong>Q</strong></span><span style="font-size: x-large;"><strong> D</strong></span>2 = {3}&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size: x-large;"><strong>Q</strong></span><span style="font-size: x-large;"><strong> D</strong></span>3 = {2}&nbsp;&nbsp;&nbsp;&nbsp; <span style="font-size: x-large;"><strong>Q</strong></span><span style="font-size: x-large;"><strong> D</strong></span>4 = {2}<br /><span style="font-size: x-large;"><strong>&nbsp;</strong></span></p>
+<p>Won <span style="font-size: x-large;"><strong>D</strong></span>1 and <span style="font-size: x-large;"><strong>D</strong></span>2 becouse &ldquo;a&rdquo; <span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">appears</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">several</span> <span title="Fai clic per visualizzare le traduzioni alternative" class="hps">times in each. <span style="color: #ff0000;"><strong>BUT IT APPEARS IN ALL DOCUMENTS!!!</strong></span></span></span><span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">&nbsp;</span></span></p>
+<p><span style="color: #ff0000;">The Presence of d in our query can not discriminate <span style="font-size: x-large;"><strong>D</strong></span>4 </span></p>
+<p><span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">We must define a schema <strong>IDF (Inverse Document Frequency)</strong></span></span></p>
+<p><span style="font-size: x-large;">w</span>ij = <span style="font-size: x-large;">log (N/n</span>j<span style="font-size: x-large;">)</span></p>
+<p><span style="font-size: x-large;">N </span><span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">is the number of documents in our collection</span></span><span style="font-size: x-large;">. </span></p>
+<p><span style="font-size: x-large;">n</span>j<span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps"> is the number of documents, of the whole collection, </span></span><span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps">where</span></span><span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps"> the descriptor</span></span><span class="short_text"><span title="Fai clic per visualizzare le traduzioni alternative" class="hps"> </span></span><span style="font-size: x-large;">t</span>j appear.</p>
+<p>So our search Engine will return <span style="font-size: x-large;"><strong>D</strong></span>4.</p>
+<p><span style="text-decoration: underline;">If a descriptor appear many times in all documents then it loses importance in the description of documents. </span></p>
+<p>&nbsp;</p>
+<p>The schema that we will use is a combination of schema explained in this post. Its name is <strong>TFIDF</strong></p>
+<p><span style="font-size: x-large;">w</span>ij = <span style="font-size: x-large;">f</span>ij <span style="font-size: x-large;">log (N/n</span>j<span style="font-size: x-large;">)</span></p>
+<p>Long documents contains relevant descriptors many times than short documents. Our search Engine will give more importance at first   .</p>
+<p><span style="font-size: x-large;"><span style="font-size: medium;"><span style="font-family: mceinline;">In your CoreData Project open .xcdatamodel and add the following table:</span></span></span></p>
+<img src="http://marcocattai.github.io/images/descriptor.png"/></p>
+
+<p><p>&nbsp;</p>
+<p>It describes:</p>
+<p>&ndash; the word field</p>
+<p>&ndash; the frequency of the word</p>
+<p>&ndash; the weight of the word</p>
+<p>&ndash; A Relation (with Inverse) to your Documents Table.</p></p>
+
+<p><p>In a document there are a lot of words that are not useful for our purposes, becouse they don&rsquo;t describe the content of our documents. That words are articles, some adjectives and so on&hellip; In the following Link you can find two list of words that I prepared in Italian and English. They&rsquo;re called <strong>STOP WORDS</strong>.</p>
+<ul>
+<li><a href="http://dl.dropbox.com/u/7201536/stop-words-ita.txt" title="STOP WORDS ITA" target="_blank"><strong>Italian STOP WORDS</strong></a></li>
+<li><a href="http://dl.dropbox.com/u/7201536/stop-words-eng.txt" title="STOP WORDS ENG" target="_blank"><strong>English STOP WORDS</strong></a></li>
+</ul>
+<p><strong>1) Read both files in two NSString:</strong></p>
+<p>NSString <em>englishStopWords &lt;&ndash; stop-words-eng.txt<br />NSString </em>italianStopWords &lt;&ndash; stop-words-ita.txt</p>
+<p><strong>Now split them in an array</strong><br /></p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'> <span class="n">NSArray</span> <span class="o"><em></span><span class="n">stopWordsITA</span> <span class="o">=</span> <span class="p">[</span><span class="n">italianStopWords</span> <span class="nl">componentsSeparatedByCharactersInSet:</span><span class="p">[</span><span class="n">NSCharacterSet</span> <span class="nl">characterSetWithCharactersInString:</span><span class="s">@&quot; </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">]];</span>
+</span><span class='line'>  <span class="n">NSArray</span> <span class="o"></em></span><span class="n">stopWordsENG</span> <span class="o">=</span> <span class="p">[</span><span class="n">englishStopWords</span> <span class="nl">componentsSeparatedByCharactersInSet:</span><span class="p">[</span><span class="n">NSCharacterSet</span> <span class="nl">characterSetWithCharactersInString:</span><span class="s">@&quot; </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">]];</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><p><strong>2) Get Your document&rsquo;s text ans save it in a dictionary where a word is the key and the value is the frequency of that word in the Document.</strong></p>
+<p><strong>3) Filter the dictionary ad remove all stop words. You can also filter the dictionary&rsquo;s representation of a document with the stopwords while you are creating it</strong></p>
+<p><strong>4) Describe your document in a DB (ex. NSManagedObject is IADocument class)</strong></p>
+<p><strong>5) Save the descriptor for that document</strong></p>
+<p><strong>6) Now keeping reference at what we explained at the beginning of this post create your retrieval function</strong></p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Linux - snippets]]></title>
+    <link href="http://marcocattai.github.io/blog/2011/06/10/linux-snippets/"/>
+    <updated>2011-06-10T18:52:14+01:00</updated>
+    <id>http://marcocattai.github.io/blog/2011/06/10/linux-snippets</id>
+    <content type="html"><![CDATA[<p>
+Search all the files/folder with that name and remove them 
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'> find . -name <span class="s2">&quot;FILE-TO-FIND&quot;</span>-exec rm -rf <span class="o">{}</span> <span class="se">\;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</p>
+
+
+
+
+<p>
+Find all files having .bak (*.bak) extension in current directory and remove them:
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>  find . -type f -name <span class="s2">&quot;*.bak&quot;</span> -exec rm -f <span class="o">{}</span> <span class="se">\;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</p>
+
+
+
+
+<p>
+Find all core files and remove them
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>  find / -name core -exec rm -f <span class="o">{}</span> <span class="se">\;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</p>
+
+
+
+
+<p>
+Find all *.bak files in current directory and removes them with confirmation from user:
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>  find . -type f -name <span class="s2">&quot;*.bak&quot;</span> -exec rm -i <span class="o">{}</span> <span class="se">\;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</p>
+
+
+
+
+<p>
+Find all pdf files and copy them in DestinationFolder:
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>  find . -type f -name <span class="s2">&quot;*.pdf&quot;</span> -exec cp <span class="o">{}</span> DestinationPath <span class="se">\;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+</p>
+
+
+
+
+<h2>Searching</h2>
+
+
+<p> <br>
+Search for pattern in files</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   grep pattern files
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Search recursively for pattern in dir</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   grep -r pattern dir
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Search for pattern in the output of command</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   <span class="nb">command</span> | grep pattern
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Locate file – Find all instances of file <br>
+Starting with the root directory, look for the file called filename</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   find / -name filename
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Starting with the root directory, look for the file containing the string filename</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   find / -name ”*filename*”
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Starting with the directory called dir, look for and list all files containing TextStringToFind</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   grep TextStringToFind /dir
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create symbolic link link to file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   ln -s file link
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create or update file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   touch file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Places standard input into file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   cat &gt; file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Display the file called file one page at a time, proceed to next page using the spacebar</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   more file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Output the first 10 lines of file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   head file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Display the first 20 lines of the file called file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   head -20 file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Output the last 10 lines of file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tail file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Display the last 20 lines of the file called file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tail -20 file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Output the contents of file as it grows, starting with the last 10 lines</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tail -f file
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<h2>Compression</h2>
+
+
+<p> Compression</p>
+
+<p> Create a tar named file.tar containing files</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tar cf file.tar files
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Extract the files from file.tar</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tar xf file.tar
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create a tar with Gzip compression</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tar czf file.tar.gz files
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Extract a tar using Gzip</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tar xzf file.tar.gz
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Create a tar with Bzip2 compression</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tar cjf file.tar.bz2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Extract a tar using Bzip2</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   tar xjf file.tar.bz2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Compresses file and renames it to file.gz</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   gzip file
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Decompresses file.gz back to file</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   gzip -d file.gz
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Client-Server Communication. Intercepting proxy]]></title>
+    <link href="http://marcocattai.github.io/blog/2011/02/03/i-client-server-communication-intercepting-proxy/"/>
+    <updated>2011-02-03T18:15:55+00:00</updated>
+    <id>http://marcocattai.github.io/blog/2011/02/03/i-client-server-communication-intercepting-proxy</id>
+    <content type="html"><![CDATA[<p><div class='post_body'><p>It is helpful to see what each side, in a client/Server communication, sends or receives. There are two Unix tools that could be usefull in such situations:</p>
+<p><a href="https://www.owasp.org/index.php/Category:OWASP_WebScarab_Project" title="https://www.owasp.org/index.php/Category:OWASP_WebScarab_Project" target="_blank">&ndash; OWASP WEBScrab Project</a></p>
+<p>WebScarab operates as an intercepting proxy, allowing the operator to   review and modify requests created by the browser before they are sent   to the server, and to review and modify responses returned from the   server before they are received by the browser. It is able to intercept  both HTTP and HTTPS communication.</p>
+<p><a href="http://www.parosproxy.org/" title="http://www.parosproxy.org/" target="_blank">&ndash; Paros</a> (<a href="http://research.corsaire.com/tools/" title="http://research.corsaire.com/tools/" target="_blank">Mac</a>)</p>
+<p>Paros features request and response editing and automated scanning of Cross Site Scripting and SQL injection vulnerabilities</p>
+<p>&ndash; NETCAT&nbsp; Listen all TCP/UDP connections on a specific port</p>
+<p>&ndash; cURL&nbsp; send &lsquo;fake&rsquo; requests to a server.</p>
+<div><span style="font-size: large;">Listening to incoming requests</span></div>
+<p><br /> We start a listening server with</p></p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   nc -lk <span class="nv">$ip</span> <span class="nv">$port</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><ul>
+<li><em><span style="font-family: Times,Times New Roman,serif;">-l: listen</span></em></li>
+<li><em><span style="font-family: Times,Times New Roman,serif;">-k: forces nc to stay listening for another connection after its current connection is completed.</span></em></li>
+<li><em><span style="font-family: Times,Times New Roman,serif;">$ip: the IP/interface you want to bind to. Use 0.0.0.0 to bind to all interfaces and IPs.</span></em></li>
+<li><em><span style="font-family: Times,Times New Roman,serif;">$port:  the port you want to bind to. Doesn&rsquo;t really matter which one you use,  as long as the client uses the same one to connect to.</span></em></li>
+</ul></p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   nc -lk 0.0.0.0 8080
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><p>&nbsp;</p>
+<p><span style="font-size: large;">Sending &ldquo;fake&rdquo; requests to a server</span></p>
+<p>&nbsp;</p>
+<p>With CURL it is as simply as that:</p></p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   curl -v -i -X POST -d <span class="nv">$data</span> <span class="nv">$uri</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p><ul>
+<li><em>&ndash;<span style="font-family: Times,Times New Roman,serif;">v: verbose</span></em></li>
+<li><em><span style="font-family: Times,Times New Roman,serif;">-i: include HTTP headers in the output</span></em></li>
+<li><em><span style="font-family: Times,Times New Roman,serif;">-X: HTTP request type. Defaults to GET if none given</span></em></li>
+<li><em><span style="font-family: Times,Times New Roman,serif;">-d: data</span></em></li>
+</ul></p>
+
+<p><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>   curl  -v -i -X POST -d  <span class="s1">&#39;{&quot;id&quot;:1,&quot;action&quot;:&quot;getRecord&quot;,&quot;params&quot;:{&quot;clientVersion&quot;:&quot;1.0.0.230&quot;,&quot;user&quot;:&quot;kat&quot;}}&#39;</span>
+</span></code></pre></td></tr></table></div></figure></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Control for <br> Interpolation - Extrapolation of points.]]></title>
+    <link href="http://marcocattai.github.io/blog/2008/09/10/control-for-interpolation-slash-extrapolation-of-points/"/>
+    <updated>2008-09-10T18:39:37+01:00</updated>
+    <id>http://marcocattai.github.io/blog/2008/09/10/control-for-interpolation-slash-extrapolation-of-points</id>
+    <content type="html"><![CDATA[<p>This DLL allow you to draw points on a Cartesian plane. Points will be interpolated using linear interpolation or spline cubic interpolation (i will give you this interpolation only if you ask me, this version of software doesn&rsquo;t have it). You can also change the value of a single point changing directly its value. You can enable or disable floating points or dicrete points visualization only selecting the option button. You can cancel points and you can ask for the extrapolation&rsquo;s value of any point you need for any specific X value that you want.</p>
+
+<br>
+
+
+<p><a href="http://dl.dropbox.com/u/7201536/ReleaseInterp.rar" title="Download Example" target="_self"><strong>Click here to download example.</strong></a></p>
+
+
+<p><a href="http://dl.dropbox.com/u/7201536/ReleaseInterp.rar" title="Download Example" target="_self"><div class='p_embed p_image_embed'>
+<img src="http://marcocattai.github.io/images/ctrlinterp.jpg"> </p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[3D GRAPH - Direct3D]]></title>
+    <link href="http://marcocattai.github.io/blog/2008/09/10/3d-graph-direct3d/"/>
+    <updated>2008-09-10T18:09:53+01:00</updated>
+    <id>http://marcocattai.github.io/blog/2008/09/10/3d-graph-direct3d</id>
+    <content type="html"><![CDATA[<p>This Software allow, using a DLL that I realized in C#/Direct3D, to visualize a 3D Map. You can modify the graph using direct manipulation of the intersection points or using 2D section&rsquo;s views. Below you can see images, video and a downlodable example that show how it works.</p>
+
+<p>I developed this for my dissertation at university and it is used in more complex software I did in 2008. The component is not the original one I did for Aprilia, the interface is different and a lot of functionalities are missing here. The original software allow the correction of injection maps of a four stroke engine. It is used for the correction of injection maps of Aprilia RSV4 (Superbike team). This component was also a simple way to see the injection maps using a 3D View.</p>
+
+<br>
+
+
+<p><img src="http://marcocattai.github.io/images/3D1.jpg" /></p>
+
+<br>
+
+
+<br>
+
+
+<p><img src="http://marcocattai.github.io/images/3D2.jpg" /></p>
+
+<br>
+
+
+<br>
+
+
+<p><img src="http://marcocattai.github.io/images/3D3.jpg" /></p>
+
+<br>
+
+
+<br>
+
+
+<p><video width='320' height='240' preload='none' controls poster='https://dl.dropboxusercontent.com/u/7201536/graphThumb.png'><source src='https://dl.dropboxusercontent.com/u/7201536/Graph2008.mp4' type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'></video></p>
+
+<br>
+
+
+<p><a href="http://dl.dropbox.com/u/7201536/graph3D-DirectX.zip" title="Example" target="_self"><strong>Click here to download the example.</strong></a></p></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MPI - parallel rotation]]></title>
+    <link href="http://marcocattai.github.io/blog/2006/02/02/mpi-parallel-rotation/"/>
+    <updated>2006-02-02T16:50:48+00:00</updated>
+    <id>http://marcocattai.github.io/blog/2006/02/02/mpi-parallel-rotation</id>
+    <content type="html"><![CDATA[<p>Parallel rotation on IBM RS/6000 SP</p>
+
+<br>
+
+
+<p><img src="http://marcocattai.github.io/images/23496089-rotaz.jpg" /></p>
+
+<br>
+
+
+
+
+<p>Programmed in C language, using MPI libraries. This is a parallel implementation of a rotation algorithm for 24BPP image in PCX(ZSOFT) format. i also implemented reader/writer for that format. Software finish always with success its execution according to settings in job&#8217;s file assigned to scheduler using loadLeveler management system. Test was executed highlighting the networking subsystem in the multicore environment IBM RS/6000 SP with image&#8217;s input of any dimension. Considered parameters in different executions are: - Different size of PCX images (800x600 - 1024x768 - 1191x893 - 2048x1536 - 4000x3000); - Different networking system (high performance switch or ethernet); - Different number of CPU. Remains invariant the angle of rotation for all the tests.
+</p>
+
+
+<p><a href="http://dl.dropbox.com/u/7201536/pcxrotate.c" title="Source code" target="_self"><strong>I also give you the code for the algorithm of rotation/scaling in  standard version for one processor. It includes encoding/decoding for images PCX(ZSOFT) 24BPP. You can use the source file under Linux and compile it with gcc. </strong></a></p></p>
+
+<p>&nbsp;</p>
+
+
+<p><p><strong><div class='p_embed p_file_embed'>
+<div class='p_embed_description'>
+<strong>RotazioneMPI.pdf</strong>
+<a href="http://marcocattai.github.io/images/5636698-RotazioneMPI.pdf">View this file</a>
+</div></p>
+]]></content>
+  </entry>
   
 </feed>

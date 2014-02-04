@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: C | Marco Cattai]]></title>
+  <link href="http://marcocattai.github.io/blog/categories/c/atom.xml" rel="self"/>
+  <link href="http://marcocattai.github.io/"/>
+  <updated>2014-02-04T22:06:43+00:00</updated>
+  <id>http://marcocattai.github.io/</id>
+  <author>
+    <name><![CDATA[Marco Cattai]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[MPI - parallel rotation]]></title>
+    <link href="http://marcocattai.github.io/blog/2006/02/02/mpi-parallel-rotation/"/>
+    <updated>2006-02-02T16:50:48+00:00</updated>
+    <id>http://marcocattai.github.io/blog/2006/02/02/mpi-parallel-rotation</id>
+    <content type="html"><![CDATA[<p>Parallel rotation on IBM RS/6000 SP</p>
+
+<br>
+
+
+<p><img src="/images/23496089-rotaz.jpg" /></p>
+
+<br>
+
+
+
+
+<p>Programmed in C language, using MPI libraries. This is a parallel implementation of a rotation algorithm for 24BPP image in PCX(ZSOFT) format. i also implemented reader/writer for that format. Software finish always with success its execution according to settings in job's file assigned to scheduler using loadLeveler management system. Test was executed highlighting the networking subsystem in the multicore environment IBM RS/6000 SP with image's input of any dimension. Considered parameters in different executions are: - Different size of PCX images (800x600 - 1024x768 - 1191x893 - 2048x1536 - 4000x3000); - Different networking system (high performance switch or ethernet); - Different number of CPU. Remains invariant the angle of rotation for all the tests.
+</p>
+
+
+<p><a href="http://dl.dropbox.com/u/7201536/pcxrotate.c" title="Source code" target="_self"><strong>I also give you the code for the algorithm of rotation/scaling in  standard version for one processor. It includes encoding/decoding for images PCX(ZSOFT) 24BPP. You can use the source file under Linux and compile it with gcc. </strong></a></p></p>
+
+<p>&nbsp;</p>
+
+
+<p><p><strong><div class='p_embed p_file_embed'>
+<div class='p_embed_description'>
+<strong>RotazioneMPI.pdf</strong>
+<a href="/images/5636698-RotazioneMPI.pdf">View this file</a>
+</div></p>
+]]></content>
+  </entry>
+  
+</feed>
