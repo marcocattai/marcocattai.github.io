@@ -4,7 +4,7 @@
   <title><![CDATA[Category: objc | Marco Cattai]]></title>
   <link href="http://marcocattai.github.io/blog/categories/objc/atom.xml" rel="self"/>
   <link href="http://marcocattai.github.io/"/>
-  <updated>2014-02-04T23:49:26+00:00</updated>
+  <updated>2014-02-05T00:08:48+00:00</updated>
   <id>http://marcocattai.github.io/</id>
   <author>
     <name><![CDATA[Marco Cattai]]></name>
@@ -19,6 +19,11 @@
     <updated>2014-02-04T23:21:01+00:00</updated>
     <id>http://marcocattai.github.io/blog/2014/02/04/ios7-style-custom-uicollectionviewlayout</id>
     <content type="html"><![CDATA[<p><video width='320' height='240' preload='none' controls poster=''><source src='http://marcocattai.github.io/images/collectionviewlayout.mov">http://marcocattai.github.io/images/collectionviewlayout.mov</a>' ></video></p>
+
+<br>
+
+
+<p><video width='320' height='240' preload='none' controls poster=''><source src='http://marcocattai.github.io/images/collectionviewlayout2.mov">http://marcocattai.github.io/images/collectionviewlayout2.mov</a>' ></video></p>
 
 <p>I never share nothing using github, but maybe I will start in the next months coz I have a lot of projects or components on my side:). My last work is this custom UICollectionViewLayout that is similar to the iOS 7 application&rsquo;s menu. I enjoyed a lot doing this interface. It is fully customizable, starting from little particoulars as the animation of the spacing between the bundle&rsquo;s items while they are zoomed. All the animations are easly customizable and it allow subfolding at multiple levels also if I don&rsquo;t find them really useful.</p>
 
