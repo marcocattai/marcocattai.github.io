@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Marco Cattai]]></title>
   <link href="http://marcocattai.github.io/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://marcocattai.github.io/"/>
-  <updated>2014-02-05T11:40:24+00:00</updated>
+  <updated>2014-02-08T23:42:17+00:00</updated>
   <id>http://marcocattai.github.io/</id>
   <author>
     <name><![CDATA[Marco Cattai]]></name>
@@ -30,7 +30,7 @@
 
 <p><video width='320' height='240' preload='none' controls poster=''><source src='http://marcocattai.github.io/images/collectionviewlayout2.mov">http://marcocattai.github.io/images/collectionviewlayout2.mov</a>' ></video></p>
 
-<p>I never share nothing using github, but maybe I will start in the next months coz I have a lot of projects or components on my side:). My last work is this custom UICollectionViewLayout that is similar to the iOS 7 application&rsquo;s menu. I enjoyed a lot doing this interface. It is fully customizable, starting from little particoulars as the animation of the spacing between the bundle&rsquo;s items while they are zoomed. All the animations are easly customizable and it allow subfolding at multiple levels also if I don&rsquo;t find them really useful.</p>
+<p>My last work is this custom UICollectionViewLayout that is similar to the iOS 7 application&rsquo;s menu. I enjoyed a lot doing this interface. It is fully customizable, starting from little particoulars as the animation of the spacing between the bundle&rsquo;s items while they are zoomed.</p>
 
 <h3>
 Next step: I will insert the drag and drop feature and maybe when I will have time I want to write an article about it sharing the relative code on gitHub. 
