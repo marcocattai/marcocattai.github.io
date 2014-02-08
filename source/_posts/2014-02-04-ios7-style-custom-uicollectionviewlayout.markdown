@@ -16,7 +16,7 @@ categories: [iOS, objc, video, UICollectionViewLayout]
 
 {% video http://marcocattai.github.io/images/collectionviewlayout2.mov 320 240 http://marcocattai.github.io/images/collectionviewlayout.jpg %}
 
-My last work is this custom UICollectionViewLayout that is similar to the iOS 7 application's menu. I enjoyed a lot doing this interface. It is fully customizable, starting from little particoulars as the animation of the spacing between the bundle's items while they are zoomed.
+My last work is this custom UICollectionViewLayout that is similar to the iOS 7 application's menu. I enjoyed a lot doing this interface. It is fully customizable.
 
 <h3>
 Next step: I will insert the drag and drop feature and maybe when I will have time I want to write an article about it sharing the relative code on gitHub. 
