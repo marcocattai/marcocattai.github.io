@@ -4,7 +4,7 @@
   <title><![CDATA[Category: UICollectionViewLayout | Marco Cattai]]></title>
   <link href="http://marcocattai.github.io/blog/categories/uicollectionviewlayout/atom.xml" rel="self"/>
   <link href="http://marcocattai.github.io/"/>
-  <updated>2014-02-08T23:42:17+00:00</updated>
+  <updated>2014-02-08T23:44:24+00:00</updated>
   <id>http://marcocattai.github.io/</id>
   <author>
     <name><![CDATA[Marco Cattai]]></name>
@@ -30,7 +30,7 @@
 
 <p><video width='320' height='240' preload='none' controls poster=''><source src='http://marcocattai.github.io/images/collectionviewlayout2.mov">http://marcocattai.github.io/images/collectionviewlayout2.mov</a>' ></video></p>
 
-<p>My last work is this custom UICollectionViewLayout that is similar to the iOS 7 application&rsquo;s menu. I enjoyed a lot doing this interface. It is fully customizable, starting from little particoulars as the animation of the spacing between the bundle&rsquo;s items while they are zoomed.</p>
+<p>My last work is this custom UICollectionViewLayout that is similar to the iOS 7 application&rsquo;s menu. I enjoyed a lot doing this interface. It is fully customizable.</p>
 
 <h3>
 Next step: I will insert the drag and drop feature and maybe when I will have time I want to write an article about it sharing the relative code on gitHub. 
