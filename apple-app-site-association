@@ -1,0 +1,12 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": {
+            "appID": "5YF4YKA59K.uk.co.boardiq.alpha",
+            "paths": [
+                "/packs/*",
+                "/annotations/*"
+            ]   
+        }
+    }
+}
